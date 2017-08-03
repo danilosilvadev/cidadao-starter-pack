@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Grid from '../assets/grid.css'
+import Grid from '../assets/grid.css';
 
 const Content = () => {
     return <div className='containerContent'>

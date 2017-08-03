@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Menu from './menu'
+import Nav from './nav'
 import Grid from '../assets/grid.css'
 
 const Header = () => {
     return <div className='containerHeader'>
         <h1>O que é...</h1>
-        <h1>Cidadão starter pack</h1>
-        <Menu />
-        <h4>Aprenda em 10 minutos os principais conceitos atuais da política.</h4>
+        <Nav />
+        <h1>Aprenda em 10 minutos os principais conceitos atuais da política.</h1>
     </div>
 }
 
