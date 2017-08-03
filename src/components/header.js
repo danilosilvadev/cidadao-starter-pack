@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Menu from './menu'
+import Grid from '../assets/grid.css'
 
 const Header = () => {
-    return <div>
+    return <div className='containerHeader'>
         <h1>O que é...</h1>
         <h1>Cidadão starter pack</h1>
         <Menu />

@@ -1,0 +1,20 @@
+* { padding: 0px; margin: 0px;}
+
+.container {
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header", "nav", "subtitle", "content", "footer";
+}
+
+.containerHeader {grid-area: header; background: red; }
+.containerNav { grid-area: nav; background: green; }
+.containerSubtitle { grid-area: subtitle; background: blue; }
+.containerContent { grid-area: content; background: yellow; }
+.containerFooter { grid-area: footer; background: black; }
+
+/*Breakpoints mobile*/
+@media screen and (max-width: 768px){
+    body { background: gray; }
+    .container { grid-template-areas: "header", "nav", "subtitle", "content", "footer" }
+    .containerSubtitle { grid-area: content; }
+}

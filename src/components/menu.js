@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Grid from '../assets/grid.css'
 
 const Menu = () => {
-    return <div>
+    return <div className='containerNav'>
         <ul>
             <li>Direta</li>
             <li>Esquerda</li>
