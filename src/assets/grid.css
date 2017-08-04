@@ -10,7 +10,7 @@
     linear-gradient(
       #ff8673, #fcce6a
     ); color: white; font-family: Arial, Helvetica, sans-serif;}
-.containerNav { grid-area: "nav"; list-style-type: none; margin: 2%; }
+.containerNav { grid-area: "nav"; list-style-type: none; margin: 2%;  }
 .containerContent { grid-area: "content"; margin: 25px; font-family: Arial, Helvetica, sans-serif;  }
 .containerFooter { grid-area: "footer"; background: black; }
 

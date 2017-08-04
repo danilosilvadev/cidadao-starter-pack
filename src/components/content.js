@@ -16,54 +16,52 @@ const Ul = Styled.ul`
 `
 
 const Content = () => {
-    return <div className='containerContent'>
-        <Ul>
-            <li className='direita'>
+    return <section className='containerContent' id='main'>
+            <article className='direita'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='esquerda'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='centro'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='ditadura'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='lgbt'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='comunismo'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='racismo'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='capitalismo'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='feminismo'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li>
+            </article>
+            <article className='ficha-suja'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-            <li className='impeachment'>
+            </article>
+            <article className='impeachment'>
                 <H2>Direta</H2>
                 <span>Some text whatever etc</span>
-            </li>
-        </Ul>
-    </div>
+            </article>
+    </section>
 }
 
 export default Content
