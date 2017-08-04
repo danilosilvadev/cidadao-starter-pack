@@ -1,54 +1,68 @@
 import React, { Component } from 'react';
 import Grid from '../assets/grid.css';
+import Styled from 'styled-components';
+
+const H2 = Styled.h2`
+            color: #fcc36b;
+            font-weight: lighter;
+            font-size: 6vh;
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+`
+
+const Ul = Styled.ul`
+            list-style-type: none;
+`
 
 const Content = () => {
     return <div className='containerContent'>
-        <ul>
-            <li>
-                <h3>Direta</h3>
+        <Ul>
+            <li className='direita'>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
             <li>
-                <h3>Direta</h3>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
-            <li>
-                <h3>Direta</h3>
+            <li className='impeachment'>
+                <H2>Direta</H2>
                 <span>Some text whatever etc</span>
             </li>
-        </ul>
+        </Ul>
     </div>
 }
 
