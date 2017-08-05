@@ -4,7 +4,6 @@ import Styled from 'styled-components';
 import Container from './container'
 import jump from 'jump.js'
 
-
 const Li = Styled.li`
             list-style: none;
             font-size: 4vh;
@@ -24,12 +23,36 @@ const H1 = Styled.h1`
             opacity: 0.7;
 `
 
-const smoothScrollTo = props => {
-    switch (props.href) {
-        case "#impeachment":
+const A = Styled.a`
+            text-decoration: none;
+`
+
+const smoothScrollTo = value => {
+    switch (value) {
+        case 'direita':
+            return jump('.direita');
+        case 'esquerda':
+            return jump('.esquerda');
+        case 'centro':
+            return jump('.centro');
+        case 'ditadura':
+            return jump('.ditadura');
+        case 'lgbt':
+            return jump('.lgbt');
+        case 'comunismo':
+            return jump('.comunismo');
+        case 'racismo':
+            return jump('.racismo');
+        case 'capitalismo':
+            return jump('.capitalismo');
+        case 'feminismo':
+            return jump('.feminismo');
+        case 'ficha-suja':
+            return jump('.ficha-suja');
+        case 'impeachment':
             return jump('.impeachment');
         default:
-            return jump('.direita');
+            jump('.mais');
     }
 }
 
@@ -37,17 +60,18 @@ const Navbar = () => {
     return <nav className='containerNav'>
         <H1>O que é...</H1>
         <ul>
-            <a href="#direita" id='direita'><Li>Direta</Li></a>
-            <a href="#esquerda"><Li>Esquerda</Li></a>
-            <a href="#centro"><Li>Centro</Li></a>
-            <a href="#ditadura"><Li>Ditadura</Li></a>
-            <a href="#lgbt" id='lgbt'><Li>LGBT</Li></a>
-            <a href="#comunismo"><Li>Comunismo</Li></a>
-            <a href="#racismo"><Li>Racismo</Li></a>
-            <a href="#capitalismo"><Li>Capitalismo</Li></a>
-            <a href="#feminismo"><Li>Feminismo</Li></a>
-            <a href="#ficha-suja"><Li>Ficha Suja</Li></a>
-            <a href="#impeachment" onClick={smoothScrollTo}><Li>Impeachment</Li></a>
+            <A href="#direita" onClick={() => smoothScrollTo('direita')}><Li>Direta</Li></A>
+            <A href="#esquerda" onClick={() => smoothScrollTo('esquerda')}><Li>Esquerda</Li></A>
+            <A href="#centro" onClick={() => smoothScrollTo('centro')}><Li>Centro</Li></A>
+            <A href="#ditadura" onClick={() => smoothScrollTo('ditadura')}><Li>Ditadura</Li></A>
+            <A href="#lgbt" onClick={() => smoothScrollTo('lgbt')}><Li>LGBT</Li></A>
+            <A href="#comunismo" onClick={() => smoothScrollTo('comunismo')}><Li>Comunismo</Li></A>
+            <A href="#racismo" onClick={() => smoothScrollTo('racismo')}><Li>Racismo</Li></A>
+            <A href="#capitalismo" onClick={() => smoothScrollTo('capitalismo')}><Li>Capitalismo</Li></A>
+            <A href="#feminismo" onClick={() => smoothScrollTo('feminismo')}><Li>Feminismo</Li></A>
+            <A href="#ficha-suja" onClick={() => smoothScrollTo('ficha-suja')} > <Li>Ficha limpa</Li></A>
+            <A href="#impeachment" onClick={() => smoothScrollTo('impeachment')}><Li>Impeachment</Li></A>
+            <A href="#mais" onClick={() => smoothScrollTo('mais')}><Li>Mais...</Li></A>
         </ul>
     </nav>
 }
