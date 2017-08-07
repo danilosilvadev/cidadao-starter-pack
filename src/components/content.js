@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Grid from '../assets/grid.css';
 import Styled from 'styled-components';
+import BackToTop from './backToTop';
 
 const H2 = Styled.h2`
             color: #fcc36b;
@@ -30,6 +31,8 @@ const A = Styled.a`
 const Content = () => {
     return <section className='containerContent' id='main'>
         <Article className='direita'>
+                    <BackToTop />
+
             <H2>Direta</H2>
             <span>No campo da política, política de direita descreve
                     uma visão ou posição específica que aceita a hierarquia
@@ -42,7 +45,7 @@ const Content = () => {
         <Article className='esquerda'>
             <H2>Esquerda</H2>
             <span>No campo da política, política de esquerda descreve uma posição que apoia a igualdade social. Normalmente, envolve uma preocupação com os cidadãos que são considerados em desvantagem em relação aos outros e uma suposição de que há desigualdades injustificadas que devem ser reduzidas ou abolidas.</span><br /><br />
-            <A  target="_blank" href="https://pt.wikipedia.org/wiki/Esquerda_(pol%C3%ADtica)" title="Saiba mais">Saiba mais...</A>
+            <A target="_blank" href="https://pt.wikipedia.org/wiki/Esquerda_(pol%C3%ADtica)" title="Saiba mais">Saiba mais...</A>
 
         </Article>
         <Article className='centro'>
