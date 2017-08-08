@@ -58,5 +58,4 @@ module.exports = {
         loaders: ["babel-loader"]
       }]
   },
-      target: 'node'
 }
