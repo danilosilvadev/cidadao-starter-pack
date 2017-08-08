@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Styled from 'styled-components'
+import axios from 'axios'
 
 const Div = Styled.div`
         font-size: 4vh;
@@ -10,7 +11,8 @@ const Div = Styled.div`
 `
 
 const Formulario = props => {
-    return <form onSubmit={props.handleSubmit}>
+    return <form onSubmit={props.handleSubmit} action='/enviar' method='post'>
+         Envie um tema que gostaria de adicionar:<br />
         <label>
             <span>Tema:  </span>
             <input type="text" onChange={props.handleChangeTema} />
@@ -56,6 +58,14 @@ export default class Form extends Component {
                 showForm: false
             });
             console.log('email', JSON.stringify(this.state.tema));
+            // Send a POST request
+            axios({
+                method: 'post',
+                url: 'localhost:7000/enviar',
+                data: {
+                    text: this.state.tema,
+                }
+            });
         }
     }
 
@@ -69,7 +79,6 @@ export default class Form extends Component {
     render() {
         return (
             <Div className='mais'>
-                Envie um tema que gostaria de adicionar:<br />
                 {this.show()}
             </Div>
         );
