@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Styled from 'styled-components'
-import axios from 'axios'
+import Styled from 'styled-components';
+import axios from 'axios';
+import Grid from '../assets/grid.css'
 
 const Div = Styled.div`
         font-size: 4vh;
@@ -10,12 +11,17 @@ const Div = Styled.div`
         font-family: sans-serif;
 `
 
+const formStyle = {
+    width: '20vh',
+    height: '2vh'
+}
+
 const Formulario = props => {
-    return <form onSubmit={props.handleSubmit} action='/enviar' method='post'>
+    return <form onSubmit={props.handleSubmit} >
          Envie um tema que gostaria de adicionar:<br />
         <label>
             <span>Tema:  </span>
-            <input type="text" onChange={props.handleChangeTema} />
+            <input type="text" onChange={props.handleChangeTema} style={formStyle}/>
         </label>
         <input type="submit" value="Enviar" style={button} />
     </form>
@@ -61,11 +67,16 @@ export default class Form extends Component {
             // Send a POST request
             axios({
                 method: 'post',
-                url: 'localhost:7000/enviar',
+                url: 'http://192.168.1.70:7000/enviar',
                 data: {
                     text: this.state.tema,
                 }
-            });
+            }).then((res)=>{
+                console.log('deu certo');
+            }).catch((err)=>{
+                console.log(err);
+
+            }); 
         }
     }
 
