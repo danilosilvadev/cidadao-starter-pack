@@ -5,7 +5,7 @@ Add topics
 
 ## Getting Started
 
-Esse repositório usa react, redux, webpack e babel.
+Esse repositório usa react, webpack e babel.
 Quem quiser contribuir só cadastrar o novo conceito em issues ou se quiser mexer no código aceito pull requests que melhorem a qualidade dele.
 
 ## Authors
